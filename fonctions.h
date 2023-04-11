@@ -1,7 +1,8 @@
 //
 // Created by etheo on 11/04/2023.
 //
-
+#define ARR 1000
+#include <stdlib.h>
 #ifndef UNTITLED1_FONCTIONS_H
 #define UNTITLED1_FONCTIONS_H
 
@@ -14,7 +15,7 @@ typedef struct Vecteur{
 }VECTEUR;
 int calculTension(int);
 int calculVitesse1D(int acceleration, int vitesseActuelle, int pas);
-
-VECTEUR primitive(VECTEUR derivee, VECTEUR constante, int pas);
-VECTEUR calculVitesse(VECTEUR acceleration,VECTEUR vitesseActuelle,int pas);
-VECTEUR calculPosition(VECTEUR acceleration,VECTEUR positionActuelle,int pas);
+VECTEUR* primitive(VECTEUR* derivee, VECTEUR* constante, int pas);
+VECTEUR* calculVitesse(VECTEUR* acceleration,VECTEUR* vitesseActuelle,int pas);
+VECTEUR* calculPosition(VECTEUR* acceleration,VECTEUR* positionActuelle,int pas);
+int calculCRR(int tensionVoulue);
