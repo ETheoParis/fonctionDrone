@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "fonctions.h"
 #include <stdlib.h>
-#define h 1/1000000
+#define h (1/1000000)
 
 int main() {
     /*début initialisation*/

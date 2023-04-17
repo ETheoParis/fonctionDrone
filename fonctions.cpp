@@ -8,7 +8,7 @@ int calculVitesse1D(int acceleration, int vitesseActuelle, int pas){
 }
 
 VECTEUR* primitive(VECTEUR* derivee, VECTEUR* constante, int pas){
-    VECTEUR* primitive = (VECTEUR*) malloc(1,sizeof(VECTEUR*));
+    VECTEUR* primitive = (VECTEUR*) calloc(1,sizeof(VECTEUR*));
     primitive->x = calculVitesse1D(derivee->x, constante->x, pas);
     primitive->y = calculVitesse1D(derivee->y, constante->y, pas);
     primitive->z = calculVitesse1D(derivee->z, constante->z, pas);
@@ -23,8 +23,9 @@ VECTEUR* calculPosition(VECTEUR* vitesse,VECTEUR* positionActuelle,int pas){
     return primitive(vitesse,positionActuelle,pas);
 }
 
-int calculTension(int valADC){
-    return valADC*3,3/4095;
+int calculCourantMoteur(int VADC){
+    int reg = VADC * 4095/(3,3);
+    return reg * 3,3 /(4095*G*Rm);
 }
 
 int calculCCR(int tensionMoteur, int Vcc){
