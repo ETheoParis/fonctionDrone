@@ -17,9 +17,10 @@ typedef struct Vecteur{
     int y;
     int z;
 }VECTEUR;
-int calculCourantMoteur(int VADC);
+int calculCourantMoteur(int reg);
 int calculVitesse1D(int acceleration, int vitesseActuelle, int pas);
-VECTEUR* primitive(VECTEUR* derivee, VECTEUR* constante, int pas);
-VECTEUR* calculVitesse(VECTEUR* acceleration,VECTEUR* vitesseActuelle,int pas);
-VECTEUR* calculPosition(VECTEUR* acceleration,VECTEUR* positionActuelle,int pas);
+void primitive(VECTEUR* derivee, VECTEUR* constante,VECTEUR* primitive ,int pas);
+void calculVitesse(VECTEUR* acceleration,VECTEUR* vitesseActuelle,VECTEUR* nouvelleVitesse,int pas);
+void calculPosition(VECTEUR* acceleration,VECTEUR* positionActuelle,VECTEUR* nouvellePosition,int pas);
 int calculCRR(int tensionVoulue);
+void recopie(VECTEUR * nouveau, VECTEUR * ancien);
