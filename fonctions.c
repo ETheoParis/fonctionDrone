@@ -25,7 +25,7 @@ int calculCourantMoteur(int reg){
     return reg * 3,3 /(4095*G*Rm);
 }
 
-int calculCCR(int tensionMoteur, int Vcc){
+float calculCCR(float tensionMoteur,float Vcc){
     return tensionMoteur*ARR/Vcc;
 }
 
