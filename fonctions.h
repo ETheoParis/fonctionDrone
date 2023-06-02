@@ -13,14 +13,14 @@
 #endif //UNTITLED1_FONCTIONS_H
 
 typedef struct Vecteur{
-    int x;
-    int y;
-    int z;
+    float x;
+    float y;
+    float z;
 }VECTEUR;
-int calculCourantMoteur(int reg);
-int calculVitesse1D(int acceleration, int vitesseActuelle, int pas);
-void primitive(VECTEUR* derivee, VECTEUR* constante,VECTEUR* primitive ,int pas);
-void calculVitesse(VECTEUR* acceleration,VECTEUR* vitesseActuelle,VECTEUR* nouvelleVitesse,int pas);
-void calculPosition(VECTEUR* acceleration,VECTEUR* positionActuelle,VECTEUR* nouvellePosition,int pas);
+float calculCourantMoteur(float reg);
+float calculVitesse1D(float acceleration, float vitesseActuelle, float pas);
+void primitive(VECTEUR* derivee, VECTEUR* constante,VECTEUR* primitive ,float pas);
+void calculVitesse(VECTEUR* acceleration,VECTEUR* vitesseActuelle,VECTEUR* nouvelleVitesse,float pas);
+void calculPosition(VECTEUR* acceleration,VECTEUR* positionActuelle,VECTEUR* nouvellePosition,float pas);
 float calculCCR(float tensionVoulue,float VCC);
 void recopie(VECTEUR * nouveau, VECTEUR * ancien);
