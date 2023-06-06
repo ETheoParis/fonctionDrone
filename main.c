@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "fonctions.h"
 #include <stdlib.h>
-#define h (1)
+#define h (1) //en seconde
 
 int main() {
     /*début initialisation*/
@@ -27,7 +27,7 @@ int main() {
         calculPosition(&nouvelleVitesse,&position,&nouvellePosition,h);
         recopie(&position,&nouvellePosition);
         recopie(&vitesse,&nouvelleVitesse);
-        printf("x=%d y=%d z=%d\n",position.x, position.y, position.z);
+        printf("x=%f y=%f z=%f\n",position.x, position.y, position.z);
         i++;
         /*fin code*/
     }
