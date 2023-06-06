@@ -23,6 +23,7 @@ int main() {
     /*fin initialisation*/
     while(i<10){
         /*début code*/
+        if(i==5){acceleration.y = 3.14;}
         calculVitesse(&acceleration,&vitesse,&nouvelleVitesse,h);
         calculPosition(&nouvelleVitesse,&position,&nouvellePosition,h);
         recopie(&position,&nouvellePosition);
